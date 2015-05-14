@@ -1,119 +1,121 @@
-////////////////////////////////////////////////////////////////////////////////
-// Excercise:
-//
-// Render `DATA` to the page
-// - put the title in an h1
-// - only render mexican food (hint: arrays have a "filter" method)
-// - sort the items in alphabetical order by name
-//   (might want to use `sort-by` https://github.com/staygrimm/sort-by#example)
-////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+Excercise:
 
-// var React = require('react');
-// var sortBy = require('sort-by');
-
-// var DATA = {
-//   title: 'Menu',
-//   items: [
-//     { id: 1, name: 'tacos', type: 'mexican' },
-//     { id: 2, name: 'burrito', type: 'mexican' },
-//     { id: 3, name: 'tostada', type: 'mexican' },
-//     { id: 4, name: 'hush puppies', type: 'southern' }
-//   ]
-// };
-
-// var Menu = React.createClass({
-//   render () {
-//     return null;
-//   }
-// });
-
-// React.render(<Menu/>, document.body, () => {
-//   require('./tests').run();
-// });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Render `DATA` to the page
+- put the title in an h1
+- only render mexican food (hint: arrays have a "filter" method)
+- sort the items in alphabetical order by name
+  (might want to use `sort-by` https://github.com/staygrimm/sort-by#example)
+//////////////////////////////////////////////////////////////////////////////
 
 var React = require('react');
+var sortBy = require('sort-by');
 
-var { h1, div, li, ul } = React.DOM;
+var DATA = {
+  title: 'Menu',
+  items: [
+    { id: 1, name: 'tacos', type: 'mexican' },
+    { id: 2, name: 'burrito', type: 'mexican' },
+    { id: 3, name: 'tostada', type: 'mexican' },
+    { id: 4, name: 'hush puppies', type: 'southern' }
+  ]
+};
 
-var element = div({}, 
-                    h1({}, 'hello'),
-                    ul({},
-                        li({}, "Charlie"),
-                        li({}, "Charles")
-                      )
-                    );
-
-var element2 = (
-  <div>
-    <h1> Hello from JSX </h1>
-    <ul>
-      <li> Charlie </li>
-      <li> Charles </li>
-    </ul>
-  </div>
-);
-
-<!-- React.render(element2, document.body); -->
-
-var App = React.createClass({
-  render() {
-    return (
-      <div> 
-        <h1>Hello from Composite Component</h1>
-        <ul>
-          <li>Charlie</li>          
-          <li>Charles</li>          
-        </ul>
-      </div>
-    );
+var Menu = React.createClass({
+  render () {
+    return null;
   }
 });
 
-React.render(<App>, document.body);
+React.render(<Menu/>, document.body, () => {
+  require('./tests').run();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var React = require('react');
+
+// var { h1, div, li, ul } = React.DOM;
+
+// var element = div({}, 
+//                     h1({}, 'hello'),
+//                     ul({},
+//                         li({}, "Charlie"),
+//                         li({}, "Charles")
+//                       )
+//                     );
+
+// var element2 = (
+//   <div>
+//     <h1> Hello from JSX </h1>
+//     <ul>
+//       <li> Charlie </li>
+//       <li> Charles </li>
+//     </ul>
+//   </div>
+// );
+
+// React.render(element2, document.body);
+
+// var App = React.createClass({
+//   render() {
+//     return (
+//       <div> 
+//         <h1>Hello from Composite Component</h1>
+//         <ul>
+//           <li>Charlie</li>          
+//           <li>Charles</li>          
+//         </ul>
+//       </div>
+//     );
+//   }
+// });
+
+
+
+// React.render(<App/>, document.body);
